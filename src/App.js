@@ -1,16 +1,16 @@
 // import logo from './logo.svg';
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React,{useState} from 'react'
 import Alert from "./components/Alert";
 
-import {
-  Route,
-  Routes,
-  BrowserRouter
-} from "react-router-dom";
+// import {
+//   Route,
+//   Routes,
+//   BrowserRouter
+// } from "react-router-dom";
 
 function App() {
   const [mode,setMode] = useState('light');
@@ -66,20 +66,21 @@ function App() {
     <>
     
       {/* <Navbar /> */}
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       <Navbar title="TextUtils" home="Home" mode={mode} toggleMode={toggleMode} toggleGreen={toggleGreen} toggleYellow={toggleYellow} toggleRed={toggleRed}/>
       <Alert alert={alert} />
       <div className="container my-3" >
-      <Routes>
+      {/* <Routes>
           <Route path="/about" element={<About />}>
             
-          </Route>
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text" mode={mode}/>}> 
+          </Route> */}
+          {/* <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text" mode={mode}/>}> 
             
           </Route>
-        </Routes>
+        </Routes> */}
+        <TextForm showAlert={showAlert} heading="Enter your text" mode={mode}/>
       </div>
-      </BrowserRouter>   
+      {/* </BrowserRouter>    */}
     
     </>
   );
