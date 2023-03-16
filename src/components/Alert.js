@@ -6,7 +6,7 @@ export default function Alert(props) {
     //     return lower.chatAt(0).toUpperCase + lower.slice(1)
     // }
   return (
-    <div>
+    <div style={{height:'50px'}}>
         {props.alert && <div className={`alert  alert-${props.alert.type} `} role="alert">
         <strong>{props.alert.type}</strong> {props.alert.message}
         </div>}
