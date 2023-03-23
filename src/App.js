@@ -6,11 +6,11 @@ import TextForm from "./components/TextForm";
 import React,{useState} from 'react'
 import Alert from "./components/Alert";
 
-import {
-  Route,
-  Routes,
-  BrowserRouter
-} from "react-router-dom";
+// import {
+//   Route,
+//   Routes,
+//   BrowserRouter
+// } from "react-router-dom";
 
 function App() {
   const [mode,setMode] = useState('light');
