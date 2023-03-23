@@ -18,10 +18,13 @@ function App() {
   const toggleGreen = ()=>{
     setMode('success')
     document.body.style.backgroundColor = 'green'
+    
   }
   const toggleRed = ()=>{
     setMode('danger')
     document.body.style.backgroundColor = 'red'
+    
+
   }
   const toggleYellow = ()=>{
     setMode('warning')
@@ -66,20 +69,20 @@ function App() {
     <>
     
       {/* <Navbar /> */}
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       <Navbar title="TextUtils" home="Home" mode={mode} toggleMode={toggleMode} toggleGreen={toggleGreen} toggleYellow={toggleYellow} toggleRed={toggleRed}/>
       <Alert alert={alert} />
       <div className="container my-3" >
-      <Routes>
-          <Route path="/about" element={<About />}>
-            
-          </Route>
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text" mode={mode}/>}> 
-            
-          </Route>
-      </Routes>
+      {/* <Routes> */}
+          {/* <Route path="/about" element={<About mode={mode} />}> */}
+          <About mode={mode} />
+          {/* </Route> */}
+          {/* <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text" mode={mode}/>}>  */}
+          <TextForm showAlert={showAlert} heading="Enter your text" mode={mode}/> 
+          {/* </Route> */}
+      {/* </Routes> */}
       </div>
-      </BrowserRouter>   
+      {/* </BrowserRouter>    */}
     
     </>
   );

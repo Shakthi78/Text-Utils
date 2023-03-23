@@ -8,6 +8,7 @@ export default function TextForm(props) {
     }
 
 
+    const [text, setText] = useState('');   
 
     const handleUpCase = ()=>{
         // console.log("upper case is clicked");
@@ -29,6 +30,7 @@ export default function TextForm(props) {
         props.showAlert('Text has been cleared','success')
 
     }
+    const [wordCount, setWordCount] = useState(0);
     const onChange = (event)=>{
         // console.log("Changed");
         setText(event.target.value)
@@ -37,8 +39,6 @@ export default function TextForm(props) {
         const numWords1 = numwords ? numwords.length : 0;
         setWordCount(numWords1);
     }
-    const [text, setText] = useState('');   
-    const [wordCount, setWordCount] = useState(0);
  
     return (
         <>
@@ -56,7 +56,7 @@ export default function TextForm(props) {
         <div className='container' style={{color : props.mode === 'dark'?'white':'black'}}>
         <h1 className="my-4">Your summary</h1>
         <p>{wordCount} words, {text.length} charcters</p>
-        <p>{0.025 * text.trim().length } per minute</p>
+        <p>{0.0025 * text.trim().length }  minute</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:'Nothing to preview'}</p>
 
